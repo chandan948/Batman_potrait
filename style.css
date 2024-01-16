@@ -1,0 +1,40 @@
+#superhero {
+    width: 350px;
+    aspect-ratio: 1;
+    background: 
+    linear-gradient(#000 0 0) 50% 104%/80% 5%,
+    radial-gradient(#000 70%,#0000 72%) 50% 10%/9% 11%,
+    radial-gradient(#000 70%,#0000 72%) 50% 29%/40% 16%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#superhero:before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #1e54b3;
+    border-radius: 50%;
+    animation: m 4s .5s both;
+}
+#superhero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    clip-path: polygon(52% 10%,48% 10%,47% 2%,45% 16%,46% 23%,29% 32%,26% 39%,12% 100%,88% 100%,74% 39%,71% 32%,54% 23%,55% 16%,53% 2%);
+}
+@keyframes m {
+    0% {translate: -400% 10%}
+    40% {translate: -200% -30%}
+    60% {translate: -130% 30%}
+    95% {translate: -20% -70%}
+    100% {translate: 0%}
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #06e5bc;
+}
